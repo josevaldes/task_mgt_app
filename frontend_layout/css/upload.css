@@ -1,0 +1,21 @@
+
+.default_select
+{
+  color: black;
+}
+
+.file_input
+{
+  margin:auto;
+  width:100%;
+  border:2px solid #ababab;
+}
+#file_section
+{
+  margin-bottom: 8%;
+}
+
+#project_section
+{
+  margin-bottom: 8%;
+}

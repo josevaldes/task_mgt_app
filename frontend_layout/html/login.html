@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+    <html>
+      <head>
+       <meta charset="UTF-8">
+       <meta name="viewport" content="width=device-width, initial-scale=1.0">
+       <title> Employee login </title>
+       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+       <link rel="stylesheet" href="./frontend_layout/css/login.css"> 
+      </head>
+    <body class= "mybackground">
+      <div class="container mybackground" id="login">
+      <div class="row">
+      <div class="col-md-4 ignore"></div>
+      <div class="col-md-4 text-center" style="background-color:rgba(0, 0, 0, 0.4);" >
+        <img src="./frontend_layout/img/logo_paradigma.png" alt="Paradigma" id="logo">
+        <form method="post" action="login.php">
+        <div id="credential_field">
+          <span class="login-text">USUARIO</span><br>
+          <input type="text" name="uname"><br>
+          <span class="login-text">PASSWORD</span><br>
+          <input type="password" name="passwd"><br>
+          <input  type="submit" value="LOGIN">
+        </div>
+        </form>
+        <div id="recover_field">
+        <p class="login-text"> PRIMER INGRESO/CAMBIO DE CONTRASEÑA <br>
+            INGRESAR CORREO
+        </p>
+        <form method="post" action="set_employee_credentials.php" >
+        <input type="text" name="email"><br>
+        <input  type= "submit" value="CHECK">
+        </form>
+      </div>
+      </div>
+      <div class="col-md-4 ignore"></div>
+    </div>
+  </div>
+
+  </body>
+  </html>

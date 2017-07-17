@@ -1,0 +1,92 @@
+li:hover,
+li:focus
+{
+  cursor: pointer;
+  background-color: #b8bbc1;
+}
+
+.standard_li
+{
+  color:black;
+  background-color: #ababab;
+  width: 100%;
+  border-bottom: 1px solid black;
+  height: 50px;
+  text-align: center;
+  font-size: 20px;
+}
+
+.standard_ul
+{
+  list-style-type: none;
+  width: 100%;
+  padding: 0;
+}
+
+h4
+{
+  color: white;
+}
+
+#main_content
+{
+  padding:0;
+  background-color: rgba(0,0,0,0.4);
+  margin-top: 3%;
+}
+
+.upper_icons
+{
+  width:5%;
+}
+
+.icons_menu
+{
+  width: 100%;
+  margin-bottom: 4%;
+}
+.upper_icons:hover,
+.upper_icons:focus,
+.icons_menu:hover,
+.icons_menu:focus,
+.menu_option:hover,
+.menu_option:focus
+{
+  cursor:pointer;
+}
+
+.menu_title
+{
+   background-color: #b8bbc1;
+   font-size: 15px;
+   color: black;
+   width: 100%;
+   text-align: center;
+}
+
+.menu_option
+{
+   width: 30%;
+   padding-left: 8%;
+   padding-right: 8%;
+}
+
+.row_menu
+{
+  text-align: center;
+  padding-left: 6%;
+  padding-right: 6%;
+  margin-bottom: 5%;
+}
+.menu
+{
+  min-width: 250px;
+  padding-left: 0;
+  display: none;
+  z-index: -5;
+}
+.show
+{
+  display: block;
+  z-index: 10;
+}

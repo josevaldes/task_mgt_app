@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+    <html>
+      <head>
+       <meta charset="UTF-8">
+       <meta name="viewport" content="width=device-width, initial-scale=1.0">
+       <title> Welcome </title>
+       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+       <link rel="stylesheet" href="../css/index.css">
+      </head>
+      <body class="mybackground">
+        <header class="container-fluid" >
+          <div class="row text-center" style="background-color: black;">
+              <div class="col-md-2">
+            </div>
+
+            <div class="col-md-2 element menu_text dropdown_menu menu_1" onclick="toggleOptions(1)" >
+              PROYECTOS
+            </div>
+
+            <div class="col-md-2 element menu_text dropdown_menu menu_2" onclick="toggleOptions(2)" >
+               ADMINSTRADOR DE USUARIOS
+             </div>
+
+            <div class="col-md-2 element menu_text dropdown_menu menu_3" onclick="toggleOptions(3)">
+              UTILIDADES
+             </div>
+
+            <div class="col-md-2 element menu_text dropdown_menu menu_4 perfil" onclick="toggleOptions(4)">
+                 PERFIL <span ><img class="dropdown_menu" src="../img/logo_paradigma.png" style="border: 2px solid white; border-radius: 50%; width:50%;  background-color: transparent"></span>
+            </div>
+            <div class="col-md-2">
+              <a href="#"><img style="width: 70%; margin-left: 25%;" src="../img/logo_paradigma.png"></a>
+            </div>
+          </div>
+        </header>
+
+        <div class="container-fluid" >
+          <div class="row text-center">
+              <div class="col-md-2"></div>
+
+            <div class="col-md-2" >
+              <ul class="text-center menu" id="menu_1">
+                <li class="dropdown_content"><a href="#">CREAR PROYECTO</a></li>
+                <li class="dropdown_content"><a href="#">ELIMINAR PROYECTO</a></li>
+                <li class="dropdown_content"><a href="#">AGREGAR TAREA</a></li>
+                <li class="dropdown_content"><a href="#">ELIMINAR TAREA TERMINADA</a></li>
+                <li class="dropdown_content"><a href="#">ACTUALIZAR TAREA</a></li>
+              </ul>
+            </div>
+
+            <div class="col-md-2">
+              <ul class="text-center menu" id="menu_2">
+                <li class="dropdown_content"><a href="#">AGREGAR EMPLEADO</a></li>
+                <li class="dropdown_content"><a href="#">ELIMINAR EMPLEADO</a></li>
+                <li class="dropdown_content"><a href="#">AGREGAR ADMINISTRADOR</a></li>
+                <li class="dropdown_content"><a href="#">REINICIAR CREDENCIALES DE EMPLEADO</a></li>
+              </ul>
+             </div>
+
+            <div class="col-md-2" >
+              <ul class="text-center menu" id="menu_3">
+                <li class="dropdown_content"><a href="#">AGREGAR ARCHIVO</a></li>
+                <li class="dropdown_content"><a href="#">MOSTRADOR DE TAREAS</a></li>
+                <li class="dropdown_content"><a href="#">EXPLORADOR DE ARCHIVOS</a></li>
+              </ul>
+             </div>
+
+            <div class="col-md-2" >
+                  <ul class="text-center menu" id="menu_4">
+                    <li class="dropdown_content"><a href="#">AJUSTES</a></li>
+                    <li class="dropdown_content"><a href="#">LOGOUT</a></li>
+                  </ul>
+            </div>
+            <div class="col-md-2">
+            </div>
+          </div>
+        </div>
+
+        <div class="container-fluid" style="z-index: -1; position: fixed; margin-top: -15%;">
+          <div class="row">
+            <div class="col-md-10">
+              <h1 class="header-text"> BIENVENIDO DE VUELTA </h1>
+            </div>
+          </div>
+      </div>
+
+      <script>
+
+      function toggleOptions(column)
+      {
+         //document.getElementById("myDropdown").classList.toggle("show");
+         var curr = document.getElementsByClassName("menu_" + column)[0];
+         curr.classList.toggle("selected")
+         var column_id = "menu_" + column;
+
+         var elements = document.getElementsByClassName("menu");
+         for(var i = 0; i < elements.length; ++i)
+         {
+           if(elements[i].id === column_id)
+           {
+             elements[i].classList.toggle("show");
+           }
+           else
+           {
+              if (elements[i].classList.contains('show'))
+              {
+                 elements[i].classList.remove('show');
+              }
+           }
+         }
+         var menus = document.getElementsByClassName("dropdown_menu");
+         for(var j = 0; j < menus.length; ++j)
+         {
+           if(!menus[j].classList.contains(column_id) && menus[j].classList.contains("selected"))
+           {
+             menus[j].classList.remove("selected");
+           }
+         }
+      }
+
+      // Close the dropdown if the user clicks outside of it
+
+      window.onclick = function(event)
+      {
+          if (!event.target.matches('.dropdown_menu'))
+          {
+             var dropdowns = document.getElementsByClassName("menu");
+             var i;
+             for (i = 0; i < dropdowns.length; ++i)
+             {
+                var openDropdown = dropdowns[i];
+                if (openDropdown.classList.contains('show'))
+                {
+                    openDropdown.classList.remove('show');
+                }
+            }
+            var menus = document.getElementsByClassName("dropdown_menu");
+            var j;
+            for (j = 0; j < menus.length; ++j)
+            {
+               var curr_menu = menus[j];
+               if (curr_menu.classList.contains('selected'))
+               {
+                   curr_menu.classList.remove('selected');
+               }
+           }
+         }
+      }
+
+      </script>
+      </body>
+    </html>

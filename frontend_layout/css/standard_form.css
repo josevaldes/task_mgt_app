@@ -1,0 +1,84 @@
+.mybackground
+{
+  background: url("./../img/login_background.jpg") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.ignore
+{
+  visibility: hidden;
+}
+
+.login-text
+{
+  color: white; !important
+}
+
+input[type="text"] , input[type="password"]
+{
+  width: 80%;
+  margin-bottom: 5%;
+  color:black;
+}
+
+input[type="submit"]
+{
+  background-color: #b8bbc1;
+  color:black;
+}
+#login
+{
+  margin-top: 5%;
+}
+#logo
+{
+  width: 70%;
+  margin-top:10%;
+}
+#credential_field
+{
+  margin-top: 13%;
+}
+
+#recover_field
+{
+  margin-top: 15%;
+  margin-bottom: 15%;
+}
+
+.menu
+{
+  min-width: 250px;
+  padding-left: 0;
+  display: none;
+  z-index: -5;
+}
+.show
+{
+  display: block;
+  z-index: 10;
+}
+
+.form_text
+{
+  display: table;
+  width: 100%;
+  margin-top: 5%;
+}
+.form_row
+{
+  display: table-row;
+  width: 100%;
+}
+
+.form_label
+{
+  display: table-cell;
+}
+.first_label
+{
+  width: 30%;
+}

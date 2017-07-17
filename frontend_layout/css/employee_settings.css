@@ -1,0 +1,29 @@
+.default_select
+{
+  color: black;
+}
+.container-fluid input
+{
+   width: 100%;
+   clear: both;
+}
+.sections
+{
+  background-color: rgba(0,0,0,0.6);
+  border: 2px solid white;
+  font-size: 20px;
+  min-height: 450px;
+}
+
+.menu
+{
+  min-width: 250px;
+  padding-left: 0;
+  display: none;
+  z-index: -5;
+}
+.show
+{
+  display: block;
+  z-index: 10;
+}
